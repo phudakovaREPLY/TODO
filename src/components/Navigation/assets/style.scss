@@ -1,18 +1,1 @@
 @import "../../../assets/variables";
-
-.navigation {
-  .navbar {
-    background-color: darkseagreen;
-    a {
-      color: $primary;
-      font-size: 1.7rem;
-    }
-    li {
-      margin-left: 10px;
-    }
-    .navbar-nav {
-      flex-direction: row;
-    }
-  }
-
-}
