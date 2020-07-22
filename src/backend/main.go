@@ -16,7 +16,7 @@ func main() {
 
 	MongoClient, _ = mongo.Connect(context.TODO(), clientOptions)
 
-	// Chekck the connection
+	// Check the connection
 	err := MongoClient.Ping(context.TODO(), nil)
 	if err != nil {
 		log.Fatalf("Cannot connect to mongo-service: %+v", err)
