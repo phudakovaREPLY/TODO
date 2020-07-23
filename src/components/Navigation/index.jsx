@@ -4,6 +4,8 @@ import {Nav, NavbarBrand, Navbar, NavItem} from 'reactstrap';
 import logo from './assets/replyLogo.png';
 
 const Navigation = props => {
+
+
     return(
         <div className='navigation'>
             <Navbar className="navbar navbar-light bg-light">
