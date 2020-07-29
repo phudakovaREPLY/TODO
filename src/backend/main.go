@@ -32,6 +32,7 @@ func main() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/api/v1/createtodo", handlers.CreateTodo).Methods("POST", "OPTIONS")
+	router.HandleFunc("/api/v1/getall", handlers.GetAllTodos).Methods("GET", "OPTIONS")
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 
