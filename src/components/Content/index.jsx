@@ -9,7 +9,9 @@ const Content = props => {
     const [taskList, setTaskList] = useState(null)
 
     function getDataFromAPI(){
-        axios.get().then(res => {
+        axios.get("http://localhost:8080/api/v1/getall", {params: {
+            done: false
+            }}).then(res => {
             if(res.status===200){
                 setTaskList(res.data)
             } else {
@@ -49,7 +51,7 @@ const Content = props => {
     else {
         for(let i = 0; i < taskList.length; i++) {
             renderTaskList.push(
-                <ListGroupItem key={`item-${i}`}>{taskList[i]}</ListGroupItem>
+                <ListGroupItem key={`item-${i}`}>{taskList[i].task}</ListGroupItem>
             )
         }
     }
