@@ -11,9 +11,10 @@ import (
 
 // GetAllTodos from the database
 func GetAllTodos(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type,access-control-allow-origin, access-control-allow-headers")
+	w.Header().Set("content-type", "application-json")
+    w.Header().Set("Access-Control-Allow-Origin", "*")
+   	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE")
+   	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, access-control-allow-origin, access-control-allow-headers, access-control-allow-methods")
 
 	var todos []models.Todo
 	collection := MongoClient.Database("todo").Collection("todos")
