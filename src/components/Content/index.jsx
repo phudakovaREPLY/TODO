@@ -50,14 +50,9 @@ const Content = props => {
     }, []);
 
     const renderTaskList = []
-    if(!taskList) {
+    if(!taskList || taskList.length === 0) {
         renderTaskList.push(
-            <ListGroupItem key="loading">Loading ...</ListGroupItem>
-        )
-    }
-    else if(taskList.length === 0) {
-        renderTaskList.push(
-            <ListGroupItem key="empty">No records saved</ListGroupItem>
+            <ListGroupItem key="empty">OOPS... much empty </ListGroupItem>
         )
     }
     else {
